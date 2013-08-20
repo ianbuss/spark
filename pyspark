@@ -18,7 +18,7 @@
 #
 
 # Figure out where the Scala framework is installed
-FWDIR="$(cd `dirname $0`; pwd)"
+FWDIR=$(python -c "import os,sys; print os.path.dirname(os.path.realpath(\"$0\"))")
 
 # Export this as SPARK_HOME
 export SPARK_HOME="$FWDIR"

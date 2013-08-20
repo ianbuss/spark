@@ -28,7 +28,7 @@
 # Enter posix mode for bash
 set -o posix
 
-FWDIR="`dirname $0`"
+FWDIR=$(python -c "import os,sys; print os.path.dirname(os.path.realpath(\"$0\"))")
 
 for o in "$@"; do
   if [ "$1" = "-c" -o "$1" = "--cores" ]; then
